@@ -6,7 +6,7 @@ const glob = require("glob");
 module.exports = {
     entry: glob
         .sync("./dist/typescript/*.tsx")
-        .reduce(function(entry, filePath) {
+        .reduce(function (entry, filePath) {
             entry[path.parse(filePath).name] = filePath;
             return entry;
         }, {}),
@@ -14,24 +14,23 @@ module.exports = {
     mode: "production",
     optimization: {
         minimize: true,
-        minimizer: [new TerserPlugin()]
+        minimizer: [new TerserPlugin()],
     },
     module: {
         rules: [
             {
                 test: /\.tsx?$/,
                 use: "ts-loader",
-                exclude: /node_modules/
-            }
-        ]
+                exclude: /node_modules/,
+            },
+        ],
     },
     resolve: {
-        extensions: [".tsx"]
+        extensions: [".tsx"],
     },
     output: {
         path: path.resolve(__dirname, "dist", "javascript"),
-        library: ["[name]"],
-        libraryTarget: "commonjs2"
+        libraryTarget: "commonjs2",
     },
-    devtool: "source-map"
+    devtool: "source-map",
 };
