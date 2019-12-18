@@ -1,5 +1,5 @@
 {
-    "name": "react-ionicons",
+    "name": "@simonmeusel/react-ionicons",
     "version": "0.0.0",
     "description": "npm package exporting Ionicons v4 SVGs as react components",
     "scripts": {

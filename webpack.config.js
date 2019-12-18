@@ -29,7 +29,9 @@ module.exports = {
         extensions: [".tsx"]
     },
     output: {
-        path: path.resolve(__dirname, "dist", "javascript")
+        path: path.resolve(__dirname, "dist", "javascript"),
+        library: ["[name]"],
+        libraryTarget: "commonjs2"
     },
     devtool: "source-map"
 };
