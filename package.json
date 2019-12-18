@@ -1,0 +1,50 @@
+{
+    "name": "react-ionicons",
+    "version": "0.0.0",
+    "description": "npm package exporting Ionicons v4 SVGs as react components",
+    "scripts": {
+        "build": "shx rm -rf dist && ts-node src/index.ts && webpack --mode production",
+        "prepack": "npm run build && shx cp dist/javascript/* . && shx cp dist/typescript/*.d.ts . && cp node_modules/ionicons/LICENSE LICENSE-IONICONS",
+        "postpublish": "shx mv webpack.config.js webpack.config && shx rm *.{js,map,d.ts} && shx mv webpack.config webpack.config.js"
+    },
+    "repository": {
+        "type": "git",
+        "url": "git+https://github.com/simonmeusel/react-ionicons.git"
+    },
+    "keywords": [
+        "typescript",
+        "react",
+        "ionicons",
+        "component"
+    ],
+    "author": "Simon Meusel",
+    "license": "MIT",
+    "bugs": {
+        "url": "https://github.com/simonmeusel/react-ionicons/issues"
+    },
+    "homepage": "https://github.com/simonmeusel/react-ionicons#readme",
+    "devDependencies": {
+        "@types/fs-extra": "^8.0.1",
+        "@types/node": "^12.12.21",
+        "@types/react": "^16.9.16",
+        "@types/react-dom": "^16.9.4",
+        "fs-extra": "^8.1.0",
+        "glob": "^7.1.6",
+        "ionicons": "^4.6.3",
+        "lodash.camelcase": "^4.3.0",
+        "react": "^16.12.0",
+        "react-dom": "^16.12.0",
+        "shx": "^0.3.2",
+        "terser-webpack-plugin": "^2.3.1",
+        "ts-loader": "^6.2.1",
+        "ts-node": "^8.5.4",
+        "typescript": "^3.7.3",
+        "webpack": "^4.41.3",
+        "webpack-cli": "^3.3.10",
+        "webpack-node-externals": "^1.7.2"
+    },
+    "peerDependencies": {
+        "react": ">15.0.0",
+        "react-dom": ">15.0.0"
+    }
+}

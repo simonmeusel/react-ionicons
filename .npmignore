@@ -1,0 +1,8 @@
+*
+!/package*
+!/LICENSE*
+!/README*
+!/*.js
+!/*.map
+!/*.d.ts
+/webpack.config.js
