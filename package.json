@@ -1,6 +1,6 @@
 {
     "name": "@simonmeusel/react-ionicons",
-    "version": "0.1.0",
+    "version": "0.2.0",
     "description": "npm package exporting Ionicons v4 SVGs as react components",
     "scripts": {
         "build": "shx rm -rf dist && ts-node src/index.ts && webpack --mode production",
